@@ -70,9 +70,9 @@ input {
 .grid {
     display: grid;
     grid-template-areas:
-        "my-header my-header"
-        "my-aside my-main"
-        "my-aside my-main"
+        "my-header my-header my-header"
+        "my-aside my-main my-main"
+        "my-aside my-main my-main"
     ;
     grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
     gap: 8rem 0;
@@ -92,7 +92,7 @@ input {
 .header__logo {
     font-weight: 700;
     font-size: 6.4rem;
-    line-height: 7.5rem;
+    line-height: 117%;
     margin-right: 7rem;
 }
 
@@ -100,7 +100,7 @@ input {
     font-style: normal;
     font-weight: 500;
     font-size: 2.4rem;
-    line-height: 2.8rem;
+    line-height: 116%;
 }
 
 .header__nav>a:not(:last-child) {
@@ -128,17 +128,17 @@ input {
     color: #FFFFFF;
     font-weight: 400;
     font-size: 2rem;
-    line-height: 2.3rem;
+    line-height: 115%;
 }
 
-.header__find>input::placeholder{
+.header__find>input::placeholder {
     font-weight: 400;
     font-size: 2rem;
-    line-height: 2.3rem;
+    line-height: 115%;
     color: #FFFFFF;
 }
 
-.header__date{
+.header__date {
     text-align: center;
     margin-right: 8.6rem;
 }
@@ -146,19 +146,302 @@ input {
 .header_hour {
     font-weight: 400;
     font-size: 2rem;
-    line-height: 2.3rem;
+    line-height: 115%;
 }
 
 .header_day {
     font-weight: 400;
     font-size: 1.2rem;
-    line-height: 1.4rem;
+    line-height: 116%;
 }
 
 .header__userprofile {
     width: 6rem;
     height: 6rem;
     border-radius: 50%;
+}
+
+.main-display__trailer {
+    position: relative;
+    width: 98.5%;
+    height: 20.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url(../img/main-display__trailer_img.png);
+    border-radius: 1.6rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 1.9rem;
+}
+
+.main-display__views {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.6rem;
+    line-height: 118%;
+}
+
+.main-display__header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.4rem;
+    line-height: 150%;
+}
+
+.main-display__date {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.button-play__wrap {
+    position: absolute;
+    width: 81px;
+    height: 81px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(0.5rem);
+    border-radius: 50%;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.button-play {
+    width: 2.7rem;
+    height: 3rem;
+    background: url(../img/play_btn.png) no-repeat top right;
+}
+
+.title {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+
+}
+
+.title__main {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 115%;
+    margin-right: 2rem;
+}
+
+.title__count {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 115%;
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.title__right {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.title__right img {
+    margin-left: 0.8rem;
+    width: 1rem;
+    height: 2rem;
+}
+
+.title__left {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.trending {
+    display: flex;
+    padding-right: 1.6rem;
+}
+
+.trending div:not(:last-child) {
+    margin-right: 6rem;
+}
+
+.trending__item {
+    position: relative;
+    width: 70%;
+    height: 25.1rem;
+    background: url(../img/tranding-continue.png) no-repeat center;
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.trending__footer {
+    position: relative;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(1.6rem);
+    border-radius: 1.6rem;
+    width: 100%;
+    height: 6.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 6.4rem;
+    padding-right: 1.9rem;
+}
+
+.trending__teg {
+    position: absolute;
+    top: 6%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(1.6rem);
+    border-radius: 1.6rem;
+    width: 12rem;
+    height: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 114%;
+    margin-top: 1.9rem;
+    margin-left: 1.9rem;
+}
+
+.small {
+    width: 3.5rem;
+    height: 3.5rem;
+    left: 3.4rem;
+}
+
+.button-play.small {
+    background: url(../img/play_btn__small.png) no-repeat center right;
+    width: 1rem;
+    margin-bottom: .1rem;
+    margin-right: .2rem;
+    height: 1.2rem;
+}
+
+.trending__header {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 150%;
+    width: 100%;
+}
+
+.trending__date {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+}
+
+.trending__time {
+    width: 8rem;
+    height: 2.5rem;
+    background: #FFFFFF;
+    border-radius: 1.6rem;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 114%;
+}
+
+.popular {
+    padding-right: 2rem;
+    display: flex;
+}
+
+.popular div:not(:last-child){
+    margin-right: 5rem;
+}
+
+.popular__item {
+    width: 28.6rem;
+    height: 19.2rem;
+    background: url(../img/netflix.png) center no-repeat;
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: flex-end;
+}
+
+.popular__footer {
+    width: 100%;
+    height: 3.8rem;
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(1.6rem);
+    border-radius: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.exrasmall {
+    width: 1.8rem;
+    height: 1.8rem;
+    left: 2.9rem;
+}
+
+.button-play.exrasmall {
+    background: url(../img/play_btn__extrasmall.png) no-repeat;
+    width: 0.66rem;
+    height: 0.66rem;
+    margin-left: 1rem;
+}
+
+.popular__raiting img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.popular__title {
+    width: 100%;
+    margin-left: 4.7rem;
+}
+
+.popular__header {
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 140%;
+    width: 100%;
+}
+
+.popular__date {
+    font-weight: 700;
+    font-size: 8px;
+    line-height: 112%;
+}
+
+.popular__raiting {
+    margin-right: 1.9rem;
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 120%;
+    display: flex;
+}
+
+.popular__raiting img {
+    margin-right: 0.4rem;
 }
 
 /* grid */
